@@ -15,4 +15,9 @@ class Note extends Model
      * @var list<string>
      */
     protected $guarded = ['id'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }
